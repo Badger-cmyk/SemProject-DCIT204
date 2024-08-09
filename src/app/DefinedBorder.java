@@ -22,6 +22,6 @@ public class DefinedBorder implements Border {
 
     @Override
     public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-        g.fillRoundRect(x,y, width - 1, height - 1, radius, radius);
+        g.drawRoundRect(x,y,width-1,height-1,radius,radius);
     }
 }

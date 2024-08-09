@@ -109,5 +109,6 @@ public class Main {
         //distances from night market to...
         graph.addEdge(new Extent(nightMarket, diaspora, 850));
 
+        new UI();
     }
 }

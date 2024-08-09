@@ -26,19 +26,19 @@ public class LandMark extends JFrame {
         this.add(backButton);
 
         JLabel currentLocation = new JLabel();
-        currentLocation.setText("Where are you right now? Select your current location...");
+        currentLocation.setText("Select your location...");
         currentLocation.setBounds(100, 50, 200, 40);
         currentLocation.setFont(new Font("Serif", Font.BOLD, 20));
         this.add(currentLocation);
 
         JLabel landMarkLocation = new JLabel();
-        landMarkLocation.setText("Choose landmark:");
+        landMarkLocation.setText("Choose landmark...");
         landMarkLocation.setBounds(100, 150, 250, 40);
         landMarkLocation.setFont(new Font("Serif", Font.BOLD, 20));
         this.add(landMarkLocation);
 
         JLabel destinationLocation = new JLabel();
-        destinationLocation.setText("Where are you going? Choose your destination...");
+        destinationLocation.setText("Choose destination...");
         destinationLocation.setBounds(100, 250, 200, 40);
         destinationLocation.setFont(new Font("Serif", Font.BOLD, 20));
         this.add(destinationLocation);
@@ -51,15 +51,15 @@ public class LandMark extends JFrame {
         };
 
         source = new JComboBox<>(locations);
-        source.setBounds(450, 50, 200, 50);
+        source.setBounds(550, 50, 200, 30);
         this.add(source);
 
         destination = new JComboBox<>(locations);
-        destination.setBounds(450, 50, 200, 50);
+        destination.setBounds(550, 250, 200, 30);
         this.add(destination);
 
         landmark = new JComboBox<>(locations);
-        landmark.setBounds(450, 50, 200, 50);
+        landmark.setBounds(550,150,200,30);
         this.add(landmark);
 
         JLabel initialPath = new JLabel();
@@ -77,13 +77,13 @@ public class LandMark extends JFrame {
         firstHalfPath = new JLabel();
         firstHalfPath.setBounds(300, 400, 800, 40);
         firstHalfPath.setBorder(new DefinedBorder(10));
-        firstHalfPath.setFont(new Font("Serif",Font.BOLD, 15));
+        firstHalfPath.setFont(new Font("Serif",Font.BOLD, 20));
         this.add(firstHalfPath);
 
         secondHalfPath = new JLabel();
         secondHalfPath.setBounds(300, 500, 800, 40);
         secondHalfPath.setBorder(new DefinedBorder(10));
-        secondHalfPath.setFont(new Font("Serif",Font.BOLD, 15));
+        secondHalfPath.setFont(new Font("Serif",Font.BOLD, 20));
         this.add(secondHalfPath);
 
         distanceDisplay = new JLabel();
@@ -103,7 +103,7 @@ public class LandMark extends JFrame {
         this.setSize(1300,700);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.getContentPane().setBackground(Color.cyan);
+        this.getContentPane().setBackground(Color.GRAY);
         this.setTitle("Possible Routes Based On Landmark");
         this.setVisible(true);
 
