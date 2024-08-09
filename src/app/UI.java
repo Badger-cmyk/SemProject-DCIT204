@@ -11,7 +11,7 @@ public class UI extends JFrame {
     private final JComboBox<String> destination;
     private final JLabel shortestPathDisplay;
     private final JLabel distanceDisplay;
-    private final JButton landMarkButton;
+//    private final JButton landMarkButton;
 
     UI(){
         this.setTitle("Finding Possible Paths To Your Destination");
@@ -27,11 +27,11 @@ public class UI extends JFrame {
         currentLocation.setBounds(100, 50, 200, 40);
         this.add(currentLocation);
 
-        JLabel landMarkLocation = new JLabel();
-        landMarkLocation.setText("Or use a landmark instead?...");
-        landMarkLocation.setFont(new Font("Serif", Font.BOLD, 20));
-        landMarkLocation.setBounds(100, 300, 250, 40);
-        this.add(landMarkLocation);
+//        JLabel landMarkLocation = new JLabel();
+//        landMarkLocation.setText("Or use a landmark instead?...");
+//        landMarkLocation.setFont(new Font("Serif", Font.BOLD, 20));
+//        landMarkLocation.setBounds(100, 300, 250, 40);
+//        this.add(landMarkLocation);
 
         JLabel destinationLocation = new JLabel();
         destinationLocation.setText("Select destination...");
@@ -77,26 +77,26 @@ public class UI extends JFrame {
         getPossiblePaths.setBorder(new DefinedBorder(10));
         getPossiblePaths.setFocusable(false);
 
-        landMarkButton = new JButton("Use landmark(s)");
-        landMarkButton.setBounds(580, 300, 130, 25);
-        landMarkButton.setFocusable(false);
-        landMarkButton.setBorder(new DefinedBorder(10));
+//        landMarkButton = new JButton("Use landmark(s)");
+//        landMarkButton.setBounds(580, 300, 130, 25);
+//        landMarkButton.setFocusable(false);
+//        landMarkButton.setBorder(new DefinedBorder(10));
 
         this.add(getPossiblePaths);
-        this.add(landMarkButton);
+//        this.add(landMarkButton);
         this.setVisible(true);
 
         getPossiblePaths.addActionListener(this::getPath);
-        landMarkButton.addActionListener(this::landMarkPath);
+//        landMarkButton.addActionListener(this::landMarkPath);
 
     }
 
-    private void landMarkPath(ActionEvent actionEvent) {
-        if(actionEvent.getSource() == landMarkButton){
-            this.dispose();
-            new LandMark();
-        }
-    }
+//    private void landMarkPath(ActionEvent actionEvent) {
+//        if(actionEvent.getSource() == landMarkButton){
+//            this.dispose();
+//            new LandMark();
+//        }
+//    }
 
     private void getPath(ActionEvent actionEvent) {
         try{
@@ -114,6 +114,7 @@ public class UI extends JFrame {
         }
         catch(NullPointerException exception){
             System.out.println(exception.getMessage());
+            distanceDisplay.setText("Try another destination or location");
         }
     }
 
